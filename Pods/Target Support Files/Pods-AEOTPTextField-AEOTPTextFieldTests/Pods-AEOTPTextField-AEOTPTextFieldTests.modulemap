@@ -1,0 +1,6 @@
+framework module Pods_AEOTPTextField_AEOTPTextFieldTests {
+  umbrella header "Pods-AEOTPTextField-AEOTPTextFieldTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
