@@ -35,7 +35,7 @@ public class AEOTPTextField: UITextField {
         return recognizer
     }()
     
-    public func configure(with slotCount: Int = 5) {
+    public func configure(with slotCount: Int = 6) {
         guard isConfigured == false else { return }
         isConfigured.toggle()
         configureTextField()
@@ -56,6 +56,7 @@ public class AEOTPTextField: UITextField {
         textColor = .clear
         keyboardType = .numberPad
         textContentType = .oneTimeCode
+        borderStyle = .none
         addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         delegate = implementation
         implementation.implementationDelegate = self
