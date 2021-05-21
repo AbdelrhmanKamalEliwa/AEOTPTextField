@@ -16,6 +16,7 @@ public class AEOTPTextField: UITextField {
 
     public var otpDefaultCharacter = ""
     public var otpBackgroundColor: UIColor = UIColor(red: 0.949, green: 0.949, blue: 0.949, alpha: 1)
+    public var otpFilledBackgroundColor: UIColor = UIColor(red: 0.949, green: 0.949, blue: 0.949, alpha: 1)
     public var otpCornerRaduis: CGFloat = 10
     public var otpDefaultBorderColor: UIColor = .clear
     public var otpFilledBorderColor: UIColor = .darkGray
@@ -102,10 +103,12 @@ public class AEOTPTextField: UITextField {
                 currentLabel.text = String(text[index])
                 currentLabel.layer.borderWidth = otpFilledBorderWidth
                 currentLabel.layer.borderColor = otpFilledBorderColor.cgColor
+                currentLabel.backgroundColor = otpFilledBackgroundColor
             } else {
                 currentLabel.text = otpDefaultCharacter
                 currentLabel.layer.borderWidth = otpDefaultBorderWidth
                 currentLabel.layer.borderColor = otpDefaultBorderColor.cgColor
+                currentLabel.backgroundColor = otpBackgroundColor
             }
         }
         if text.count == digitLabels.count {
