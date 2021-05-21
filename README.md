@@ -69,11 +69,11 @@ $ pod install
 
 ### Carthage
 
-####The integration of AEOTPTextField using Carthage will be available soon.
+The integration of AEOTPTextField using Carthage will be available soon.
 
 ### Swift Package Manager
 
-####The integration of AEOTPTextField using Swift Package Manager will be available soon.
+The integration of AEOTPTextField using Swift Package Manager will be available soon.
 
 ## Usage
 ### Code-less Storyboard Implementation
@@ -117,7 +117,7 @@ extension ViewController: AEOTPTextFieldDelegate {
 ```
 You have done.
 ### Customization
-###AEOTPTextField
+AEOTPTextField
 `AEOTPTextField` supports the following:
 ``` swift
     // The default character placed in the text field slots
@@ -144,7 +144,7 @@ You have done.
     public var otpFont: UIFont = UIFont.systemFont(ofSize: 14)
 ```
 
-###Example of Customization
+Example of Customization
 ``` swift
     override func viewDidLoad() {
         super.viewDidLoad()
