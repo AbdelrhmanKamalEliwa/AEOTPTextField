@@ -38,7 +38,6 @@ class ViewController: UIViewController {
         }
         present(alertController, animated: true)
     }
-
 }
 
 // MARK: - AEOTPTextField Delegate
