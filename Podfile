@@ -18,5 +18,5 @@ target 'AEOTPTextFieldExample' do
   use_frameworks!
 
   # Pods for AEOTPTextFieldExample
-
+  pod 'AEOTPTextField', :path => './'
 end
