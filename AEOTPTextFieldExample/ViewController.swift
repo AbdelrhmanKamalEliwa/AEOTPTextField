@@ -49,4 +49,3 @@ extension ViewController: AEOTPTextFieldDelegate {
         displayAlert(with: "Verify Result", message: message, actions: [doneAction])
     }
 }
-
