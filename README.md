@@ -19,6 +19,7 @@
 * **[References](#References)**
 * **[Contributed](#Contributed)**
 * **[License](#License)**
+* **[Author](#Author)**
 
 ## Overview
 
@@ -168,3 +169,7 @@ This is an open source project, so feel free to contribute.
 ## License
 
 AEOTPTextField is available under the MIT license.
+
+## Author
+
+[Abdelrhman Eliwa](https://github.com/AbdelrhmanKamalEliwa), made this with ❤️.
