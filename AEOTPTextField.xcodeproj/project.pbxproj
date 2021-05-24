@@ -10,6 +10,7 @@
 		67B60FC1B8CDA40D7878AA3C /* Pods_AEOTPTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9639EE14546AAD5527100B95 /* Pods_AEOTPTextField.framework */; };
 		AAE23A6B3856F46AF83D88D5 /* Pods_AEOTPTextFieldExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2B81427A16359E45E786E7 /* Pods_AEOTPTextFieldExample.framework */; };
 		D3A1EAF6A6EA222E6CB8CB4D /* Pods_AEOTPTextField_AEOTPTextFieldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8D2B0D0FB7EB2DBA191659 /* Pods_AEOTPTextField_AEOTPTextFieldTests.framework */; };
+		F46A9E78265C470700949E8D /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46A9E77265C470700949E8D /* Package.swift */; };
 		F4DF02EC2652DB23004B24B0 /* AEOTPTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DF02E22652DB22004B24B0 /* AEOTPTextField.framework */; };
 		F4DF02F12652DB23004B24B0 /* AEOTPTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF02F02652DB23004B24B0 /* AEOTPTextFieldTests.swift */; };
 		F4DF02F32652DB23004B24B0 /* AEOTPTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = F4DF02E52652DB22004B24B0 /* AEOTPTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,6 +43,7 @@
 		7C2B81427A16359E45E786E7 /* Pods_AEOTPTextFieldExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AEOTPTextFieldExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A863DD7149079AF88D2F661 /* Pods-AEOTPTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEOTPTextField.debug.xcconfig"; path = "Target Support Files/Pods-AEOTPTextField/Pods-AEOTPTextField.debug.xcconfig"; sourceTree = "<group>"; };
 		9639EE14546AAD5527100B95 /* Pods_AEOTPTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AEOTPTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46A9E77265C470700949E8D /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
 		F4DF02E22652DB22004B24B0 /* AEOTPTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEOTPTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DF02E52652DB22004B24B0 /* AEOTPTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEOTPTextField.h; sourceTree = "<group>"; };
 		F4DF02E62652DB22004B24B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				F4DF02E52652DB22004B24B0 /* AEOTPTextField.h */,
 				F4DF02E62652DB22004B24B0 /* Info.plist */,
+				F46A9E77265C470700949E8D /* Package.swift */,
 				F4DF03142652DC24004B24B0 /* Source */,
 			);
 			path = AEOTPTextField;
@@ -407,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F46A9E78265C470700949E8D /* Package.swift in Sources */,
 				F4DF031B2652DCAA004B24B0 /* AEOTPTextField.swift in Sources */,
 				F4DF031C2652DCAA004B24B0 /* AEOTPTextFieldImplementation.swift in Sources */,
 			);
@@ -601,10 +605,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = abdelrhmankamaleliwa.AEOTPTextField;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -630,10 +635,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = abdelrhmankamaleliwa.AEOTPTextField;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
