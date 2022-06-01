@@ -12,29 +12,67 @@ import Combine
 public struct AEOTPView: View {
     // MARK: - PROPERTIES
     //
+    /// A Boolean value that used to help the `AEOTPView` supporting Clear OTP
     @State private var flag: Bool = false
+    /// A Binding String value of the OTP
     @Binding private var text: String
-    
+    /// An Intger value to set the number of the slots of the `AEOTPView`
     private let slotsCount: Int
+    /// A CGFloat value to set a custom width to the `AEOTPView`
     private let width: CGFloat
+    /// A CGFloat value to set a custom height to the `AEOTPView`
     private let height: CGFloat
+    /// The default character placed in the text field slots
     private let otpDefaultCharacter: String
+    /// The default background color of the text field slots before entering a character
     private let otpBackgroundColor: UIColor
+    /// The default background color of the text field slots after entering a character
     private let otpFilledBackgroundColor: UIColor
+    /// The default corner raduis of the text field slots
     private let otpCornerRaduis: CGFloat
+    /// The default border color of the text field slots before entering a character
     private let otpDefaultBorderColor: UIColor
+    /// The border color of the text field slots after entering a character
     private let otpFilledBorderColor: UIColor
+    /// The default border width of the text field slots before entering a character
     private let otpDefaultBorderWidth: CGFloat
+    /// The border width of the text field slots after entering a character
     private let otpFilledBorderWidth: CGFloat
+    /// The default text color of the text
     private let otpTextColor: UIColor
+    /// The default font size of the text
     private let otpFontSize: CGFloat
+    /// The default font of the text
     private let otpFont: UIFont
+    /// A Boolean value that indicates whether the text object disables text copying and, in some cases, hides the text that the user enters.
     private let isSecureTextEntry: Bool
+    /// A Boolean value that used to allow the `AEOTPView` clear the OTP and set the `AEOTPView` to the default state when you set the OTP Text with Empty Value
     private let enableClearOTP: Bool
+    /// A Closure that fires when the OTP returned
     private var onCommit: (() -> Void)?
     
     // MARK: - INIT
     //
+    /// The Initializer of the `AEOTPTextView`
+    /// - Parameters:
+    ///   - text: The OTP text that entered into AEOTPView
+    ///   - slotsCount: The number of OTP slots in the AEOTPView
+    ///   - width: The default width of the AEOTPView
+    ///   - height: The default height of the AEOTPView
+    ///   - otpDefaultCharacter: The default character placed in the text field slots
+    ///   - otpBackgroundColor: The default background color of the text field slots before entering a character
+    ///   - otpFilledBackgroundColor: The default background color of the text field slots after entering a character
+    ///   - otpCornerRaduis: The default corner raduis of the text field slots
+    ///   - otpDefaultBorderColor: The default border color of the text field slots before entering a character
+    ///   - otpFilledBorderColor: The border color of the text field slots after entering a character
+    ///   - otpDefaultBorderWidth: The default border width of the text field slots before entering a character
+    ///   - otpFilledBorderWidth: The border width of the text field slots after entering a character
+    ///   - otpTextColor: The default text color of the text
+    ///   - otpFontSize: The default font size of the text
+    ///   - otpFont: The default font of the text
+    ///   - isSecureTextEntry: A Boolean value that indicates whether the text object disables text copying and, in some cases, hides the text that the user enters.
+    ///   - enableClearOTP: A Boolean value that used to allow the `AEOTPView` clear the OTP and set the `AEOTPView` to the default state when you set the OTP Text with Empty Value
+    ///   - onCommit: A Closure that fires when the OTP returned
     public init(
         text: Binding<String>,
         slotsCount: Int = 6,

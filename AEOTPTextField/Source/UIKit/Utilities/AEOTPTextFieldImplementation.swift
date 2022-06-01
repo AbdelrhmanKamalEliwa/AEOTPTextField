@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class AEOTPTextFieldImplementation: NSObject, UITextFieldDelegate {
     weak var implementationDelegate: AEOTPTextFieldImplementationProtocol?
 

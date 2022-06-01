@@ -142,8 +142,8 @@
 		46DC70602847C8800022158D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				46DC70632847C8AB0022158D /* AEOTPTextFieldDelegate.swift */,
 				46DC70652847C8AB0022158D /* AEOTPTextFieldImplementation.swift */,
+				46DC70632847C8AB0022158D /* AEOTPTextFieldDelegate.swift */,
 				46DC70642847C8AB0022158D /* AEOTPTextFieldImplementationProtocol.swift */,
 			);
 			path = Utilities;
