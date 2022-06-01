@@ -7,20 +7,31 @@
 
 import UIKit
 import AEOTPTextField
+import SwiftUI
 
 class ViewController: UIViewController {
-
-    // MARK: Properties
-    @IBOutlet weak var otpTextField: AEOTPTextField!
-    let staticCode = "112233"
+    // MARK: - PROPERTIES
+    //
+    @IBOutlet private weak var otpTextField: AEOTPTextField!
+    private let staticCode = "123456"
     
-    // MARK: Lifecycle
+    // MARK: - LIFECYCLE
+    //
     override func viewDidLoad() {
         super.viewDidLoad()
         setupOTPTextField()
     }
 
-    // MARK: Methods
+    // MARK: - METHODS
+    //
+    @IBAction func didTapButton(_ sender: UIButton) {
+        let vc = UIHostingController(rootView: SwiftUIView())
+        present(vc, animated: true)
+    }
+}
+
+// MARK: - PRIVATE METHODS
+private extension ViewController {
     func setupOTPTextField() {
         otpTextField.otpDelegate = self
         otpTextField.otpFontSize = 16
@@ -41,6 +52,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - AEOTPTextField Delegate
+//
 extension ViewController: AEOTPTextFieldDelegate {
     func didUserFinishEnter(the code: String) {
         let doneAction = UIAlertAction(title: "Done", style: .default)

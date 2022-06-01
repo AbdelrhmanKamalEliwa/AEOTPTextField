@@ -7,9 +7,6 @@
 
 import UIKit
 
-protocol AEOTPTextFieldImplementationProtocol: AnyObject {
-    var digitalLabelsCount: Int { get }
-}
 
 class AEOTPTextFieldImplementation: NSObject, UITextFieldDelegate {
     weak var implementationDelegate: AEOTPTextFieldImplementationProtocol?
