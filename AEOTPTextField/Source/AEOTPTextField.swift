@@ -13,20 +13,33 @@ public protocol AEOTPTextFieldDelegate: AnyObject {
 }
 
 public class AEOTPTextField: UITextField {
-
+    // MARK: - PROPERTIES
+    //
+    /// The default character placed in the text field slots
     public var otpDefaultCharacter = ""
+    /// The default background color of the text field slots before entering a character
     public var otpBackgroundColor: UIColor = UIColor(red: 0.949, green: 0.949, blue: 0.949, alpha: 1)
+    /// The default background color of the text field slots after entering a character
     public var otpFilledBackgroundColor: UIColor = UIColor(red: 0.949, green: 0.949, blue: 0.949, alpha: 1)
+    /// The default corner raduis of the text field slots
     public var otpCornerRaduis: CGFloat = 10
+    /// The default border color of the text field slots before entering a character
     public var otpDefaultBorderColor: UIColor = .clear
+    /// The border color of the text field slots after entering a character
     public var otpFilledBorderColor: UIColor = .darkGray
+    /// The default border width of the text field slots before entering a character
     public var otpDefaultBorderWidth: CGFloat = 0
+    /// The border width of the text field slots after entering a character
     public var otpFilledBorderWidth: CGFloat = 1
+    /// The default text color of the text
     public var otpTextColor: UIColor = .black
+    /// The default font size of the text
     public var otpFontSize: CGFloat = 14
+    /// The default font of the text
     public var otpFont: UIFont = UIFont.systemFont(ofSize: 14)
+    /// The delegate of the AEOTPTextFieldDelegate protocol
     public weak var otpDelegate: AEOTPTextFieldDelegate?
-    
+
     private var implementation = AEOTPTextFieldImplementation()
     private var isConfigured = false
     private var digitLabels = [UILabel]()
@@ -36,6 +49,10 @@ public class AEOTPTextField: UITextField {
         return recognizer
     }()
     
+    // MARK: - METHODS
+    //
+    /// This func is used to configure the `AEOTPTextField`, Usually you need to call this method into `viewDidLoad()`
+    /// - Parameter slotCount: the number of OTP slots in the TextField
     public func configure(with slotCount: Int = 6) {
         guard isConfigured == false else { return }
         isConfigured.toggle()
@@ -52,7 +69,22 @@ public class AEOTPTextField: UITextField {
         ])
     }
     
-    private func configureTextField() {
+    /// Use this func if you need to clear the `OTP` text and reset the `AEOTPTextField` to the default state
+    public func clearOTP() {
+        text = nil
+        digitLabels.forEach { currentLabel in
+            currentLabel.text = otpDefaultCharacter
+            currentLabel.layer.borderWidth = otpDefaultBorderWidth
+            currentLabel.layer.borderColor = otpDefaultBorderColor.cgColor
+            currentLabel.backgroundColor = otpBackgroundColor
+        }
+    }
+}
+
+// MARK: - PRIVATE METHODS
+//
+private extension AEOTPTextField {
+    func configureTextField() {
         tintColor = .clear
         textColor = .clear
         keyboardType = .numberPad
@@ -63,7 +95,7 @@ public class AEOTPTextField: UITextField {
         implementation.implementationDelegate = self
     }
     
-    private func createLabelsStackView(with count: Int) -> UIStackView {
+    func createLabelsStackView(with count: Int) -> UIStackView {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
@@ -78,7 +110,7 @@ public class AEOTPTextField: UITextField {
         return stackView
     }
     
-    private func createLabel() -> UILabel {
+    func createLabel() -> UILabel {
         let label = UILabel()
         label.backgroundColor = otpBackgroundColor
         label.layer.cornerRadius = otpCornerRaduis
@@ -94,13 +126,13 @@ public class AEOTPTextField: UITextField {
     }
     
     @objc
-    private func textDidChange() {
+    func textDidChange() {
         guard let text = self.text, text.count <= digitLabels.count else { return }
         for labelIndex in 0 ..< digitLabels.count {
             let currentLabel = digitLabels[labelIndex]
             if labelIndex < text.count {
                 let index = text.index(text.startIndex, offsetBy: labelIndex)
-                currentLabel.text = String(text[index])
+                currentLabel.text = isSecureTextEntry ? "✱" : String(text[index])
                 currentLabel.layer.borderWidth = otpFilledBorderWidth
                 currentLabel.layer.borderColor = otpFilledBorderColor.cgColor
                 currentLabel.backgroundColor = otpFilledBackgroundColor
@@ -111,14 +143,17 @@ public class AEOTPTextField: UITextField {
                 currentLabel.backgroundColor = otpBackgroundColor
             }
         }
+        
         if text.count == digitLabels.count {
             otpDelegate?.didUserFinishEnter(the: text)
         }
     }
 }
 
+// MARK: - AEOTPTextFieldImplementationProtocol Delegate
+//
 extension AEOTPTextField: AEOTPTextFieldImplementationProtocol {
-    func digitalLabelsCount() -> Int {
+    var digitalLabelsCount: Int {
         digitLabels.count
     }
 }

@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		67B60FC1B8CDA40D7878AA3C /* Pods_AEOTPTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9639EE14546AAD5527100B95 /* Pods_AEOTPTextField.framework */; };
-		AAE23A6B3856F46AF83D88D5 /* Pods_AEOTPTextFieldExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2B81427A16359E45E786E7 /* Pods_AEOTPTextFieldExample.framework */; };
-		D3A1EAF6A6EA222E6CB8CB4D /* Pods_AEOTPTextField_AEOTPTextFieldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8D2B0D0FB7EB2DBA191659 /* Pods_AEOTPTextField_AEOTPTextFieldTests.framework */; };
+		465369782846290D005E1D66 /* AEOTPTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DF02E22652DB22004B24B0 /* AEOTPTextField.framework */; };
+		465369792846290D005E1D66 /* AEOTPTextField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4DF02E22652DB22004B24B0 /* AEOTPTextField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F4DF02EC2652DB23004B24B0 /* AEOTPTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DF02E22652DB22004B24B0 /* AEOTPTextField.framework */; };
 		F4DF02F12652DB23004B24B0 /* AEOTPTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DF02F02652DB23004B24B0 /* AEOTPTextFieldTests.swift */; };
 		F4DF02F32652DB23004B24B0 /* AEOTPTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = F4DF02E52652DB22004B24B0 /* AEOTPTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4653697A2846290D005E1D66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4DF02D92652DB22004B24B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4DF02E12652DB22004B24B0;
+			remoteInfo = AEOTPTextField;
+		};
 		F4DF02ED2652DB23004B24B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F4DF02D92652DB22004B24B0 /* Project object */;
@@ -33,15 +39,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4653697C2846290D005E1D66 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				465369792846290D005E1D66 /* AEOTPTextField.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		1CF93A12FE352A9694DEF1B3 /* Pods-AEOTPTextField-AEOTPTextFieldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEOTPTextField-AEOTPTextFieldTests.release.xcconfig"; path = "Target Support Files/Pods-AEOTPTextField-AEOTPTextFieldTests/Pods-AEOTPTextField-AEOTPTextFieldTests.release.xcconfig"; sourceTree = "<group>"; };
-		3503EA83772A81B328222BB3 /* Pods-AEOTPTextFieldExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEOTPTextFieldExample.debug.xcconfig"; path = "Target Support Files/Pods-AEOTPTextFieldExample/Pods-AEOTPTextFieldExample.debug.xcconfig"; sourceTree = "<group>"; };
-		4F8D2B0D0FB7EB2DBA191659 /* Pods_AEOTPTextField_AEOTPTextFieldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AEOTPTextField_AEOTPTextFieldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		669240A669E5B5438A08FB31 /* Pods-AEOTPTextFieldExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEOTPTextFieldExample.release.xcconfig"; path = "Target Support Files/Pods-AEOTPTextFieldExample/Pods-AEOTPTextFieldExample.release.xcconfig"; sourceTree = "<group>"; };
-		698E05AACA7A92878610EBBE /* Pods-AEOTPTextField-AEOTPTextFieldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEOTPTextField-AEOTPTextFieldTests.debug.xcconfig"; path = "Target Support Files/Pods-AEOTPTextField-AEOTPTextFieldTests/Pods-AEOTPTextField-AEOTPTextFieldTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7C2B81427A16359E45E786E7 /* Pods_AEOTPTextFieldExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AEOTPTextFieldExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A863DD7149079AF88D2F661 /* Pods-AEOTPTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEOTPTextField.debug.xcconfig"; path = "Target Support Files/Pods-AEOTPTextField/Pods-AEOTPTextField.debug.xcconfig"; sourceTree = "<group>"; };
-		9639EE14546AAD5527100B95 /* Pods_AEOTPTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AEOTPTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DF02E22652DB22004B24B0 /* AEOTPTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEOTPTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DF02E52652DB22004B24B0 /* AEOTPTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEOTPTextField.h; sourceTree = "<group>"; };
 		F4DF02E62652DB22004B24B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,7 +70,6 @@
 		F4DF03102652DC09004B24B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4DF03192652DCAA004B24B0 /* AEOTPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEOTPTextField.swift; sourceTree = "<group>"; };
 		F4DF031A2652DCAA004B24B0 /* AEOTPTextFieldImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEOTPTextFieldImplementation.swift; sourceTree = "<group>"; };
-		FB3FB07417FD6BC6BF37CEB4 /* Pods-AEOTPTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AEOTPTextField.release.xcconfig"; path = "Target Support Files/Pods-AEOTPTextField/Pods-AEOTPTextField.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67B60FC1B8CDA40D7878AA3C /* Pods_AEOTPTextField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +85,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4DF02EC2652DB23004B24B0 /* AEOTPTextField.framework in Frameworks */,
-				D3A1EAF6A6EA222E6CB8CB4D /* Pods_AEOTPTextField_AEOTPTextFieldTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,34 +92,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAE23A6B3856F46AF83D88D5 /* Pods_AEOTPTextFieldExample.framework in Frameworks */,
+				465369782846290D005E1D66 /* AEOTPTextField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5681B3A7C2C9E3F3E892B767 /* Frameworks */ = {
+		465369772846290D005E1D66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9639EE14546AAD5527100B95 /* Pods_AEOTPTextField.framework */,
-				4F8D2B0D0FB7EB2DBA191659 /* Pods_AEOTPTextField_AEOTPTextFieldTests.framework */,
-				7C2B81427A16359E45E786E7 /* Pods_AEOTPTextFieldExample.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A6F77C3FF91C88629EDB09A5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8A863DD7149079AF88D2F661 /* Pods-AEOTPTextField.debug.xcconfig */,
-				FB3FB07417FD6BC6BF37CEB4 /* Pods-AEOTPTextField.release.xcconfig */,
-				698E05AACA7A92878610EBBE /* Pods-AEOTPTextField-AEOTPTextFieldTests.debug.xcconfig */,
-				1CF93A12FE352A9694DEF1B3 /* Pods-AEOTPTextField-AEOTPTextFieldTests.release.xcconfig */,
-				3503EA83772A81B328222BB3 /* Pods-AEOTPTextFieldExample.debug.xcconfig */,
-				669240A669E5B5438A08FB31 /* Pods-AEOTPTextFieldExample.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		F4DF02D82652DB22004B24B0 = {
@@ -120,8 +113,7 @@
 				F4DF02EF2652DB23004B24B0 /* AEOTPTextFieldTests */,
 				F4DF03012652DBFA004B24B0 /* AEOTPTextFieldExample */,
 				F4DF02E32652DB22004B24B0 /* Products */,
-				A6F77C3FF91C88629EDB09A5 /* Pods */,
-				5681B3A7C2C9E3F3E892B767 /* Frameworks */,
+				465369772846290D005E1D66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,7 +187,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4DF02F62652DB23004B24B0 /* Build configuration list for PBXNativeTarget "AEOTPTextField" */;
 			buildPhases = (
-				4C8CA5F054824EA1F81F5AFF /* [CP] Check Pods Manifest.lock */,
 				F4DF02DD2652DB22004B24B0 /* Headers */,
 				F4DF02DE2652DB22004B24B0 /* Sources */,
 				F4DF02DF2652DB22004B24B0 /* Frameworks */,
@@ -214,7 +205,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4DF02F92652DB23004B24B0 /* Build configuration list for PBXNativeTarget "AEOTPTextFieldTests" */;
 			buildPhases = (
-				ADB54E34A23E42E479C72E36 /* [CP] Check Pods Manifest.lock */,
 				F4DF02E72652DB23004B24B0 /* Sources */,
 				F4DF02E82652DB23004B24B0 /* Frameworks */,
 				F4DF02E92652DB23004B24B0 /* Resources */,
@@ -233,15 +223,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4DF03112652DC09004B24B0 /* Build configuration list for PBXNativeTarget "AEOTPTextFieldExample" */;
 			buildPhases = (
-				CAFD5DF77CE255E59C3CFEE4 /* [CP] Check Pods Manifest.lock */,
 				F4DF02FC2652DBFA004B24B0 /* Sources */,
 				F4DF02FD2652DBFA004B24B0 /* Frameworks */,
 				F4DF02FE2652DBFA004B24B0 /* Resources */,
-				B6051F797E4715E994104602 /* [CP] Embed Pods Frameworks */,
+				4653697C2846290D005E1D66 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4653697B2846290D005E1D66 /* PBXTargetDependency */,
 			);
 			name = AEOTPTextFieldExample;
 			productName = AEOTPTextFieldExample;
@@ -316,92 +306,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4C8CA5F054824EA1F81F5AFF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AEOTPTextField-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ADB54E34A23E42E479C72E36 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AEOTPTextField-AEOTPTextFieldTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B6051F797E4715E994104602 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AEOTPTextFieldExample/Pods-AEOTPTextFieldExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AEOTPTextFieldExample/Pods-AEOTPTextFieldExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AEOTPTextFieldExample/Pods-AEOTPTextFieldExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CAFD5DF77CE255E59C3CFEE4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AEOTPTextFieldExample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		F4DF02DE2652DB22004B24B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -433,6 +337,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4653697B2846290D005E1D66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4DF02E12652DB22004B24B0 /* AEOTPTextField */;
+			targetProxy = 4653697A2846290D005E1D66 /* PBXContainerItemProxy */;
+		};
 		F4DF02EE2652DB23004B24B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F4DF02E12652DB22004B24B0 /* AEOTPTextField */;
@@ -584,7 +493,6 @@
 		};
 		F4DF02F72652DB23004B24B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A863DD7149079AF88D2F661 /* Pods-AEOTPTextField.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -613,7 +521,6 @@
 		};
 		F4DF02F82652DB23004B24B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB3FB07417FD6BC6BF37CEB4 /* Pods-AEOTPTextField.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -641,7 +548,6 @@
 		};
 		F4DF02FA2652DB23004B24B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 698E05AACA7A92878610EBBE /* Pods-AEOTPTextField-AEOTPTextFieldTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -661,7 +567,6 @@
 		};
 		F4DF02FB2652DB23004B24B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CF93A12FE352A9694DEF1B3 /* Pods-AEOTPTextField-AEOTPTextFieldTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -681,7 +586,6 @@
 		};
 		F4DF03122652DC09004B24B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3503EA83772A81B328222BB3 /* Pods-AEOTPTextFieldExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -702,7 +606,6 @@
 		};
 		F4DF03132652DC09004B24B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 669240A669E5B5438A08FB31 /* Pods-AEOTPTextFieldExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

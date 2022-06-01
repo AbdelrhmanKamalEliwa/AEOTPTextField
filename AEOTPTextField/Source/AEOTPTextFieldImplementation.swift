@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AEOTPTextFieldImplementationProtocol: AnyObject {
-    func digitalLabelsCount() -> Int
+    var digitalLabelsCount: Int { get }
 }
 
 class AEOTPTextFieldImplementation: NSObject, UITextFieldDelegate {
@@ -20,6 +20,6 @@ class AEOTPTextFieldImplementation: NSObject, UITextFieldDelegate {
         replacementString string: String
     ) -> Bool {
         guard let characterCount = textField.text?.count else { return false }
-        return characterCount < implementationDelegate?.digitalLabelsCount() ?? 0 || string == ""
+        return characterCount < implementationDelegate?.digitalLabelsCount ?? 0 || string == ""
     }
 }
