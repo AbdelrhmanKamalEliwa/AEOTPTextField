@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "AEOTPTextField"
 
-  spec.version      = "1.0.9"
+  spec.version      = "1.2.0"
 
   spec.summary      = "AEOTPTextField is a global framework created by Abdelrhman Eliwa"
 
