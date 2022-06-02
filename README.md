@@ -1,4 +1,4 @@
-# ▤ AEOTPTextField
+# ▤ AEOTPTextField (UIKit & SwiftUI)
 
 ### If you like AEOTPTextField, give it a ★ at the top right of this page.
 
