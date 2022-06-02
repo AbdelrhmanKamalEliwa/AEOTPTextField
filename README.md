@@ -31,7 +31,7 @@ AEOTPTextField is a simple and easy text field control written in Swift.
 - [x] **It can be implemented in storyboard without a single line of [code](#code-less-storyboard-implementation).**
 - [x] Highly customizable without needing to write tons of custom code.
 - [x] Supports both portrait and landscape views.
-- [x] **Supports SwiftUI [implementation](#code-less-storyboard-implementation).**
+- [x] **Supports SwiftUI [implementation](#swiftui-code-implementation).**
 
 Check out the example project to see it in action!
 ### Preview Samples
@@ -246,7 +246,7 @@ Example of Customization
                     // do something
                 }
             )
-			.padding()
+	    .padding()
 
 ```
 
