@@ -68,7 +68,12 @@ public class AEOTPTextField: UITextField {
     /// Use this func if you need to clear the `OTP` text and reset the `AEOTPTextField` to the default state
     public func clearOTP() {
         text = nil
-        digitLabels.forEach({$0.text = nil})
+        digitLabels.forEach { currentLabel in
+            currentLabel.text = otpDefaultCharacter
+            currentLabel.layer.borderWidth = otpDefaultBorderWidth
+            currentLabel.layer.borderColor = otpDefaultBorderColor.cgColor
+            currentLabel.backgroundColor = otpBackgroundColor
+        }
     }
 }
 
