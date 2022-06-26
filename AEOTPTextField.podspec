@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "AEOTPTextField"
 
-  spec.version      = "1.2.0"
+  spec.version      = "1.2.2"
 
   spec.summary      = "AEOTPTextField is a global framework created by Abdelrhman Eliwa"
 
@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
 
      spec.ios.deployment_target = '12.1'
 
-     spec.source_files  = "AEOTPTextField/Source/**/*.{h,m,swift}"
+     spec.source_files  = "Sources/AEOTPTextField/Source/**/*.{h,m,swift}"
 
      #spec.resources = "AEOTPTextField/Source/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 
