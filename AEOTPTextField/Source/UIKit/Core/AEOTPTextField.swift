@@ -75,6 +75,15 @@ public class AEOTPTextField: UITextField {
             currentLabel.backgroundColor = otpBackgroundColor
         }
     }
+    /// Use this func to set the text in the code
+    public func setText(_ text: String) {
+        let characters = Array(text)
+        for i in 0 ..< characters.count {
+            if digitLabels.indices.contains(i) {
+                digitLabels[i].text = String(characters[i])
+            }
+        }
+    }
 }
 
 // MARK: - PRIVATE METHODS
