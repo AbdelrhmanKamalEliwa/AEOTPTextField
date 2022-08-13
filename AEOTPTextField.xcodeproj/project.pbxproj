@@ -213,11 +213,27 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		F4DF02D82652DB22004B24B0 = {
+		9BDA91772867A287008E9764 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				F4DF02E42652DB22004B24B0 /* AEOTPTextField */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9BDA91782867A291008E9764 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
 				F4DF02EF2652DB23004B24B0 /* AEOTPTextFieldTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		F4DF02D82652DB22004B24B0 = {
+			isa = PBXGroup;
+			children = (
+				9BDA91772867A287008E9764 /* Sources */,
+				9BDA91782867A291008E9764 /* Tests */,
 				F4DF03012652DBFA004B24B0 /* AEOTPTextFieldExample */,
 				F4DF02E32652DB22004B24B0 /* Products */,
 				465369772846290D005E1D66 /* Frameworks */,
