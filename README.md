@@ -41,7 +41,7 @@ Check out the example project to see it in action!
 ## Requirements
 - [x] Xcode 11.
 - [x] Swift 5.
-- [x] iOS 12 or higher.
+- [x] iOS 12.1 or higher.
 
 ## Installation
 ### CocoaPods
