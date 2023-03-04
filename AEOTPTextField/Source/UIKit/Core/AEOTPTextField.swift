@@ -52,7 +52,6 @@ public class AEOTPTextField: UITextField {
     public func configure(with slotCount: Int = 6) {
         guard isConfigured == false else { return }
         isConfigured.toggle()
-        configureTextField()
         
         let labelsStackView = createLabelsStackView(with: slotCount)
         addSubview(labelsStackView)
@@ -63,6 +62,7 @@ public class AEOTPTextField: UITextField {
             labelsStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             labelsStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+        configureTextField()
     }
     
     /// Use this func if you need to clear the `OTP` text and reset the `AEOTPTextField` to the default state
