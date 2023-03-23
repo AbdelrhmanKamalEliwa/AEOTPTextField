@@ -79,7 +79,9 @@ The integration of AEOTPTextField using Carthage will be available soon.
 
 ### Swift Package Manager
 
-The integration of AEOTPTextField using Swift Package Manager will be available soon.
+```swift
+.package(url: "https://github.com/AbdelrhmanKamalEliwa/AEOTPTextField.git", from: "1.2.7"),
+```
 
 ## Usage
 ### Code-less Storyboard Implementation
