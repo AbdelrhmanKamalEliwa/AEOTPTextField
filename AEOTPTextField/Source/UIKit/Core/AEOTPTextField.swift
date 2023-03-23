@@ -45,7 +45,7 @@ public class AEOTPTextField: UITextField {
         recognizer.addTarget(self, action: #selector(becomeFirstResponder))
         return recognizer
     }()
-    
+
     // MARK: - METHODS
 
     //
@@ -55,7 +55,7 @@ public class AEOTPTextField: UITextField {
         guard isConfigured == false else { return }
         isConfigured.toggle()
         configureTextField()
-        
+
         let labelsStackView = createLabelsStackView(with: slotCount)
         addSubview(labelsStackView)
         addGestureRecognizer(tapRecognizer)
@@ -66,7 +66,7 @@ public class AEOTPTextField: UITextField {
             labelsStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
-    
+
     /// Use this func if you need to clear the `OTP` text and reset the `AEOTPTextField` to the default state
     public func clearOTP() {
         text = nil
@@ -102,8 +102,10 @@ private extension AEOTPTextField {
         addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         delegate = implementation
         implementation.implementationDelegate = self
+        autocorrectionType = .no
+        autocapitalizationType = .none
     }
-    
+
     func createLabelsStackView(with count: Int) -> UIStackView {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -118,7 +120,7 @@ private extension AEOTPTextField {
         }
         return stackView
     }
-    
+
     func createLabel() -> UILabel {
         let label = UILabel()
         label.backgroundColor = otpBackgroundColor
@@ -133,7 +135,7 @@ private extension AEOTPTextField {
         label.text = otpDefaultCharacter
         return label
     }
-    
+
     @objc
     func textDidChange() {
         guard let text = text, text.count <= digitLabels.count else { return }
@@ -152,7 +154,7 @@ private extension AEOTPTextField {
                 currentLabel.backgroundColor = otpBackgroundColor
             }
         }
-        
+
         if text.count == digitLabels.count {
             otpDelegate?.didUserFinishEnter(the: text)
         }

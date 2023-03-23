@@ -80,7 +80,7 @@ The integration of AEOTPTextField using Carthage will be available soon.
 ### Swift Package Manager
 
 ```swift
-.package(url: "https://github.com/AbdelrhmanKamalEliwa/AEOTPTextField.git", from: "1.2.7"),
+.package(url: "https://github.com/AbdelrhmanKamalEliwa/AEOTPTextField.git", from: "1.2.8"),
 ```
 
 ## Usage
