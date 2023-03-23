@@ -10,13 +10,14 @@ import UIKit
 
 public class AEOTPTextField: UITextField {
     // MARK: - PROPERTIES
+
     //
     /// The default character placed in the text field slots
     public var otpDefaultCharacter = ""
     /// The default background color of the text field slots before entering a character
-    public var otpBackgroundColor: UIColor = UIColor(red: 0.949, green: 0.949, blue: 0.949, alpha: 1)
+    public var otpBackgroundColor: UIColor = .init(red: 0.949, green: 0.949, blue: 0.949, alpha: 1)
     /// The default background color of the text field slots after entering a character
-    public var otpFilledBackgroundColor: UIColor = UIColor(red: 0.949, green: 0.949, blue: 0.949, alpha: 1)
+    public var otpFilledBackgroundColor: UIColor = .init(red: 0.949, green: 0.949, blue: 0.949, alpha: 1)
     /// The default corner raduis of the text field slots
     public var otpCornerRaduis: CGFloat = 10
     /// The default border color of the text field slots before entering a character
@@ -32,7 +33,7 @@ public class AEOTPTextField: UITextField {
     /// The default font size of the text
     public var otpFontSize: CGFloat = 14
     /// The default font of the text
-    public var otpFont: UIFont = UIFont.systemFont(ofSize: 14)
+    public var otpFont: UIFont = .systemFont(ofSize: 14)
     /// The delegate of the AEOTPTextFieldDelegate protocol
     public weak var otpDelegate: AEOTPTextFieldDelegate?
 
@@ -46,6 +47,7 @@ public class AEOTPTextField: UITextField {
     }()
     
     // MARK: - METHODS
+
     //
     /// This func is used to configure the `AEOTPTextField`, Usually you need to call this method into `viewDidLoad()`
     /// - Parameter slotCount: the number of OTP slots in the TextField
@@ -75,6 +77,7 @@ public class AEOTPTextField: UITextField {
             currentLabel.backgroundColor = otpBackgroundColor
         }
     }
+
     /// Use this func to set the text in the code
     public func setText(_ text: String) {
         let characters = Array(text)
@@ -87,6 +90,7 @@ public class AEOTPTextField: UITextField {
 }
 
 // MARK: - PRIVATE METHODS
+
 //
 private extension AEOTPTextField {
     func configureTextField() {
@@ -132,7 +136,7 @@ private extension AEOTPTextField {
     
     @objc
     func textDidChange() {
-        guard let text = self.text, text.count <= digitLabels.count else { return }
+        guard let text = text, text.count <= digitLabels.count else { return }
         for labelIndex in 0 ..< digitLabels.count {
             let currentLabel = digitLabels[labelIndex]
             if labelIndex < text.count {
@@ -156,6 +160,7 @@ private extension AEOTPTextField {
 }
 
 // MARK: - AEOTPTextFieldImplementationProtocol Delegate
+
 //
 extension AEOTPTextField: AEOTPTextFieldImplementationProtocol {
     var digitalLabelsCount: Int {
