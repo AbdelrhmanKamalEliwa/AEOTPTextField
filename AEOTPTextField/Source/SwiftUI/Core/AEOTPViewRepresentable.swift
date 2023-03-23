@@ -41,7 +41,8 @@ struct AEOTPViewRepresentable: UIViewRepresentable {
         otpFontSize: CGFloat = 14,
         otpFont: UIFont = UIFont.systemFont(ofSize: 14),
         isSecureTextEntry: Bool = false,
-        onCommit: (() -> Void)? = nil
+        onCommit: (() -> Void)? = nil,
+        keyboardType: UIKeyboardType = .numberPad
     ) {
         self._text = text
         self.slotsCount = slotsCount
@@ -74,6 +75,8 @@ struct AEOTPViewRepresentable: UIViewRepresentable {
             otpFont: otpFont,
             isSecureTextEntry: isSecureTextEntry
         )
+        
+        textField.keyboardType = keyboardType
     }
     
     func makeCoordinator() -> Coordinator {
@@ -85,15 +88,13 @@ struct AEOTPViewRepresentable: UIViewRepresentable {
         return textField
     }
     
-    func updateUIView(_ uiView: AEOTPTextFieldSwiftUI, context: Context) { }
+    func updateUIView(_ uiView: AEOTPTextFieldSwiftUI, context: Context) {}
     
     class Coordinator: NSObject, UITextFieldDelegate {
-        
         @Binding private var text: String
         
         private let slotsCount: Int
         private let onCommit: (() -> Void)?
-        
         
         init(
             text: Binding<String>,

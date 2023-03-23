@@ -5,12 +5,13 @@
 //  Created by Abdelrhman Eliwa on 01/06/2022.
 //
 
-import SwiftUI
 import Combine
+import SwiftUI
 
 @available(iOS 13.0, *)
 public struct AEOTPView: View {
     // MARK: - PROPERTIES
+
     //
     /// A Boolean value that used to help the `AEOTPView` supporting Clear OTP
     @State private var flag: Bool = false
@@ -50,8 +51,11 @@ public struct AEOTPView: View {
     private let enableClearOTP: Bool
     /// A Closure that fires when the OTP returned
     private var onCommit: (() -> Void)?
-    
+    /// Type of keyboard to show
+    private let keyboardType: UIKeyboardType
+
     // MARK: - INIT
+
     //
     /// The Initializer of the `AEOTPTextView`
     /// - Parameters:
@@ -91,7 +95,8 @@ public struct AEOTPView: View {
         otpFont: UIFont = UIFont.systemFont(ofSize: 14),
         isSecureTextEntry: Bool = false,
         enableClearOTP: Bool = false,
-        onCommit: (() -> Void)? = nil
+        onCommit: (() -> Void)? = nil,
+        keyboardType: UIKeyboardType = .numberPad
     ) {
         self._text = text
         self.slotsCount = slotsCount
@@ -111,9 +116,11 @@ public struct AEOTPView: View {
         self.isSecureTextEntry = isSecureTextEntry
         self.enableClearOTP = enableClearOTP
         self.onCommit = onCommit
+        self.keyboardType = keyboardType
     }
-    
+
     // MARK: - BODY
+
     //
     public var body: some View {
         ZStack {
@@ -131,8 +138,9 @@ public struct AEOTPView: View {
             } //: condition
         } //: onChange
     } //: body
-    
+
     // MARK: - VIEWS
+
     //
     var otpView: some View {
         AEOTPViewRepresentable(
@@ -150,7 +158,8 @@ public struct AEOTPView: View {
             otpFontSize: otpFontSize,
             otpFont: otpFont,
             isSecureTextEntry: isSecureTextEntry,
-            onCommit: onCommit
+            onCommit: onCommit,
+            keyboardType: keyboardType
         )
     } //: otpView
 }
