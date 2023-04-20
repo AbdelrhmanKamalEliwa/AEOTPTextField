@@ -20,11 +20,11 @@ public class AEOTPTextField: UITextField {
     /// The default corner raduis of the text field slots
     public var otpCornerRaduis: CGFloat = 10
     /// The default border color of the text field slots before entering a character
-    public var otpDefaultBorderColor: UIColor = .clear
+    public var otpDefaultBorderColor: UIColor = UIColor(red: 0.733, green: 0.749, blue: 0.8, alpha: 1)
     /// The border color of the text field slots after entering a character
     public var otpFilledBorderColor: UIColor = .darkGray
     /// The default border width of the text field slots before entering a character
-    public var otpDefaultBorderWidth: CGFloat = 0
+    public var otpDefaultBorderWidth: CGFloat = 1
     /// The border width of the text field slots after entering a character
     public var otpFilledBorderWidth: CGFloat = 1
     /// The default text color of the text
@@ -127,6 +127,8 @@ private extension AEOTPTextField {
         label.isUserInteractionEnabled = true
         label.layer.masksToBounds = true
         label.text = otpDefaultCharacter
+        label.layer.borderColor = otpDefaultBorderColor.cgColor
+        label.layer.borderWidth = 1.0
         return label
     }
     
@@ -144,7 +146,7 @@ private extension AEOTPTextField {
             } else {
                 currentLabel.text = otpDefaultCharacter
                 currentLabel.layer.borderWidth = otpDefaultBorderWidth
-                currentLabel.layer.borderColor = otpDefaultBorderColor.cgColor
+                currentLabel.layer.borderColor = UIColor(red: 0.733, green: 0.749, blue: 0.8, alpha: 1).cgColor
                 currentLabel.backgroundColor = otpBackgroundColor
             }
         }
