@@ -10,6 +10,7 @@ import SwiftUI
 @available(iOS 13.0, *)
 struct AEOTPViewRepresentable: UIViewRepresentable {
     @Binding private var text: String
+    @Binding private var isFirstResponder: Bool
     private let slotsCount: Int
     private let otpDefaultCharacter: String
     private let otpBackgroundColor: UIColor
@@ -28,6 +29,7 @@ struct AEOTPViewRepresentable: UIViewRepresentable {
         
     init(
         text: Binding<String>,
+        isFirstResponder: Binding<Bool>,
         slotsCount: Int = 6,
         otpDefaultCharacter: String = "",
         otpBackgroundColor: UIColor = UIColor(red: 0.949, green: 0.949, blue: 0.949, alpha: 1),
@@ -44,6 +46,7 @@ struct AEOTPViewRepresentable: UIViewRepresentable {
         onCommit: (() -> Void)? = nil
     ) {
         self._text = text
+        self._isFirstResponder = isFirstResponder
         self.slotsCount = slotsCount
         self.otpDefaultCharacter = otpDefaultCharacter
         self.otpBackgroundColor = otpBackgroundColor
@@ -77,7 +80,7 @@ struct AEOTPViewRepresentable: UIViewRepresentable {
     }
     
     func makeCoordinator() -> Coordinator {
-        Coordinator(text: $text, slotsCount: slotsCount, onCommit: onCommit)
+        Coordinator(text: $text, isFirstResponder: $isFirstResponder, slotsCount: slotsCount, onCommit: onCommit)
     }
     
     func makeUIView(context: Context) -> AEOTPTextFieldSwiftUI {
@@ -85,11 +88,17 @@ struct AEOTPViewRepresentable: UIViewRepresentable {
         return textField
     }
     
-    func updateUIView(_ uiView: AEOTPTextFieldSwiftUI, context: Context) { }
+    func updateUIView(_ uiView: AEOTPTextFieldSwiftUI, context: Context) {
+        switch isFirstResponder {
+        case true: uiView.becomeFirstResponder()
+        case false: uiView.resignFirstResponder()
+        }
+    }
     
     class Coordinator: NSObject, UITextFieldDelegate {
         
         @Binding private var text: String
+        @Binding private var isFirstResponder: Bool
         
         private let slotsCount: Int
         private let onCommit: (() -> Void)?
@@ -97,10 +106,12 @@ struct AEOTPViewRepresentable: UIViewRepresentable {
         
         init(
             text: Binding<String>,
+            isFirstResponder: Binding<Bool>,
             slotsCount: Int,
             onCommit: (() -> Void)?
         ) {
             self._text = text
+            self._isFirstResponder = isFirstResponder
             self.slotsCount = slotsCount
             self.onCommit = onCommit
             
