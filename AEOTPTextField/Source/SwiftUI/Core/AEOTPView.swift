@@ -16,6 +16,8 @@ public struct AEOTPView: View {
     @State private var flag: Bool = false
     /// A Binding String value of the OTP
     @Binding private var text: String
+    /// A Binding Bool value for auto-focus
+    @Binding private var isFirstResponder: Bool
     /// An Intger value to set the number of the slots of the `AEOTPView`
     private let slotsCount: Int
     /// A CGFloat value to set a custom width to the `AEOTPView`
@@ -75,6 +77,7 @@ public struct AEOTPView: View {
     ///   - onCommit: A Closure that fires when the OTP returned
     public init(
         text: Binding<String>,
+        isFirstResponder: Binding<Bool>,
         slotsCount: Int = 6,
         width: CGFloat = UIScreen.main.bounds.width * 0.8,
         height: CGFloat = 40,
@@ -94,6 +97,7 @@ public struct AEOTPView: View {
         onCommit: (() -> Void)? = nil
     ) {
         self._text = text
+        self._isFirstResponder = isFirstResponder
         self.slotsCount = slotsCount
         self.width = width
         self.height = height
@@ -137,6 +141,7 @@ public struct AEOTPView: View {
     var otpView: some View {
         AEOTPViewRepresentable(
             text: $text,
+            isFirstResponder: $isFirstResponder,
             slotsCount: slotsCount,
             otpDefaultCharacter: otpDefaultCharacter,
             otpBackgroundColor: otpBackgroundColor,

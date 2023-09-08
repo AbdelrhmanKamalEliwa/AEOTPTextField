@@ -11,6 +11,7 @@ struct SwiftUIView: View {
     // MARK: - PROPERTIES
     //
     @State private var otp: String = ""
+    @State private var isFirstResponder: Bool = false
     @State private var alertIsPresented: Bool = false
     
     // MARK: - BODY
@@ -21,10 +22,15 @@ struct SwiftUIView: View {
                 .padding(.top, 60)
                 .padding(.leading, 16)
             
-            AEOTPView(text: $otp, otpFilledBackgroundColor: .green) {
+            AEOTPView(text: $otp, isFirstResponder: $isFirstResponder, otpFilledBackgroundColor: .green) {
                 alertIsPresented = true
             } //: AEOTPView
             .padding()
+            
+            Button("Focus"){
+                isFirstResponder.toggle()
+            }
+            
             
             Spacer()
         } //: VStack
