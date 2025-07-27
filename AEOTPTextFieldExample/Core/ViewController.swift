@@ -12,6 +12,7 @@ import SwiftUI
 class ViewController: UIViewController {
     // MARK: - PROPERTIES
     //
+    @IBOutlet weak var uiLabel: UILabel!
     @IBOutlet private weak var otpTextField: AEOTPTextField!
     private let staticCode = "123456"
     
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupOTPTextField()
+        uiLabel.text = NSLocalizedString("enterTheCode", comment: "")
     }
 
     // MARK: - METHODS

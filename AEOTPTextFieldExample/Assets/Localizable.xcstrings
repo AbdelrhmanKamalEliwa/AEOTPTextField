@@ -1,0 +1,38 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Done" : {
+
+    },
+    "enterTheCode" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "من فضلك ادخل الرمز"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter the code"
+          }
+        }
+      }
+    },
+    "Failure" : {
+
+    },
+    "Please, enter the code" : {
+
+    },
+    "Success" : {
+
+    },
+    "Verify Result" : {
+
+    }
+  },
+  "version" : "1.0"
+}

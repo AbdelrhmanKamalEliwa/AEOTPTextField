@@ -106,6 +106,7 @@ private extension AEOTPTextField {
         stackView.axis = .horizontal
         stackView.alignment = .fill
         stackView.distribution = .fillEqually
+        stackView.semanticContentAttribute = self.semanticContentAttribute
         stackView.spacing = 8
         for _ in 1 ... count {
             let label = createLabel()
