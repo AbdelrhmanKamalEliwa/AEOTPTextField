@@ -80,7 +80,7 @@ public class AEOTPTextField: UITextField {
         let characters = Array(text)
         for i in 0 ..< characters.count {
             if digitLabels.indices.contains(i) {
-                digitLabels[i].text = String(characters[i])
+                digitLabels[i].text = isSecureTextEntry ? "✱" : String(characters[i])
             }
         }
     }
